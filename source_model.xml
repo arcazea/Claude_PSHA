@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nrml xmlns="http://openquake.org/xmlns/nrml/0.5"
+      xmlns:gml="http://www.opengis.net/gml">
+
+  <sourceModel name="PSHA Banda Aceh 1990-2026 — Area + Fault Sources">
+
+    <areaSource id="AS01" name="Sumatera Fault Zone — Background Seismicity"
+      tectonicRegionType="Active Shallow Crust">
+      <areaGeometry>
+        <gml:Polygon>
+          <gml:exterior><gml:LinearRing>
+            <gml:posList>
+              94.0 4.0 97.0 4.0 97.5 5.5 97.0 7.0 95.0 7.5 93.5 6.5 93.0 5.0 94.0 4.0
+            </gml:posList>
+          </gml:LinearRing></gml:exterior>
+        </gml:Polygon>
+        <upperSeismoDepth>0</upperSeismoDepth>
+        <lowerSeismoDepth>30</lowerSeismoDepth>
+      </areaGeometry>
+      <magScaleRel>WC1994</magScaleRel>
+      <ruptAspectRatio>1.5</ruptAspectRatio>
+      <truncGutenbergRichterMFD aValue="7.3034" bValue="1.0657" minMag="5.0" maxMag="8.5"/>
+      <nodalPlaneDist>
+        <nodalPlane probability="0.5" strike="315" dip="80" rake="170"/>
+        <nodalPlane probability="0.5" strike="135" dip="80" rake="170"/>
+      </nodalPlaneDist>
+      <hypoDepthDist>
+        <hypoDepth probability="0.4" depth="10"/>
+        <hypoDepth probability="0.4" depth="20"/>
+        <hypoDepth probability="0.2" depth="30"/>
+      </hypoDepthDist>
+    </areaSource>
+
+    <areaSource id="AS02" name="Sunda Subduction Interface"
+      tectonicRegionType="Subduction Interface">
+      <areaGeometry>
+        <gml:Polygon>
+          <gml:exterior><gml:LinearRing>
+            <gml:posList>
+              92.0 3.0 93.0 1.0 97.0 1.0 97.0 5.0 95.0 6.0 93.0 5.0 92.0 3.0
+            </gml:posList>
+          </gml:LinearRing></gml:exterior>
+        </gml:Polygon>
+        <upperSeismoDepth>5</upperSeismoDepth>
+        <lowerSeismoDepth>60</lowerSeismoDepth>
+      </areaGeometry>
+      <magScaleRel>WC1994</magScaleRel>
+      <ruptAspectRatio>2.0</ruptAspectRatio>
+      <truncGutenbergRichterMFD aValue="6.8034" bValue="1.0657" minMag="5.0" maxMag="9.2"/>
+      <nodalPlaneDist>
+        <nodalPlane probability="0.7" strike="325" dip="15" rake="90"/>
+        <nodalPlane probability="0.3" strike="325" dip="20" rake="90"/>
+      </nodalPlaneDist>
+      <hypoDepthDist>
+        <hypoDepth probability="0.3" depth="15"/>
+        <hypoDepth probability="0.5" depth="30"/>
+        <hypoDepth probability="0.2" depth="50"/>
+      </hypoDepthDist>
+    </areaSource>
+
+    <areaSource id="AS03" name="Sunda Slab Deep"
+      tectonicRegionType="Subduction IntraSlab">
+      <areaGeometry>
+        <gml:Polygon>
+          <gml:exterior><gml:LinearRing>
+            <gml:posList>
+              94.0 2.0 100.0 2.0 100.0 6.0 94.0 6.0 94.0 2.0
+            </gml:posList>
+          </gml:LinearRing></gml:exterior>
+        </gml:Polygon>
+        <upperSeismoDepth>60</upperSeismoDepth>
+        <lowerSeismoDepth>300</lowerSeismoDepth>
+      </areaGeometry>
+      <magScaleRel>WC1994</magScaleRel>
+      <ruptAspectRatio>1.0</ruptAspectRatio>
+      <truncGutenbergRichterMFD aValue="6.3034" bValue="1.0657" minMag="5.0" maxMag="7.5"/>
+      <nodalPlaneDist>
+        <nodalPlane probability="1.0" strike="325" dip="60" rake="-90"/>
+      </nodalPlaneDist>
+      <hypoDepthDist>
+        <hypoDepth probability="0.3" depth="80"/>
+        <hypoDepth probability="0.4" depth="130"/>
+        <hypoDepth probability="0.3" depth="200"/>
+      </hypoDepthDist>
+    </areaSource>
+
+    <simpleFaultSource id="FS01" name="Segmen Aceh — Sesar Sumatera"
+      tectonicRegionType="Active Shallow Crust">
+      <simpleFaultGeometry>
+        <gml:LineString>
+          <gml:posList>
+            95.6000 5.5000 95.7500 5.3500 95.9200 5.2000 96.1000 5.0500 96.2200 4.9200
+          </gml:posList>
+        </gml:LineString>
+        <dip>85.0</dip>
+        <upperSeismoDepth>0.0</upperSeismoDepth>
+        <lowerSeismoDepth>20.0</lowerSeismoDepth>
+      </simpleFaultGeometry>
+      <magScaleRel>WC1994</magScaleRel>
+      <ruptAspectRatio>2.0</ruptAspectRatio>
+      <truncGutenbergRichterMFD aValue="3.8340" bValue="1.0657" minMag="5.0" maxMag="7.33"/>
+      <rake>170</rake>
+    </simpleFaultSource>
+
+    <simpleFaultSource id="FS02" name="Segmen Seulimeum — Sesar Sumatera"
+      tectonicRegionType="Active Shallow Crust">
+      <simpleFaultGeometry>
+        <gml:LineString>
+          <gml:posList>
+            96.2200 4.9200 96.4000 4.7800 96.5800 4.6200 96.7500 4.4500 96.9200 4.3000
+          </gml:posList>
+        </gml:LineString>
+        <dip>82.0</dip>
+        <upperSeismoDepth>0.0</upperSeismoDepth>
+        <lowerSeismoDepth>20.0</lowerSeismoDepth>
+      </simpleFaultGeometry>
+      <magScaleRel>WC1994</magScaleRel>
+      <ruptAspectRatio>2.0</ruptAspectRatio>
+      <truncGutenbergRichterMFD aValue="3.7924" bValue="1.0657" minMag="5.0" maxMag="7.40"/>
+      <rake>170</rake>
+    </simpleFaultSource>
+
+  </sourceModel>
+</nrml>

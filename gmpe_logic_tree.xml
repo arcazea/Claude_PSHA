@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nrml xmlns="http://openquake.org/xmlns/nrml/0.5">
+  <logicTree logicTreeID="gmpe_lt">
+    
+    <logicTreeBranchingLevel branchingLevelID="bl1">
+      <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs1" applyToTectonicRegionType="Active Shallow Crust">
+        <logicTreeBranch branchID="b11">
+          <uncertaintyModel>BooreAtkinson2008</uncertaintyModel>
+          <uncertaintyWeight>0.4</uncertaintyWeight>
+        </logicTreeBranch>
+        <logicTreeBranch branchID="b12">
+          <uncertaintyModel>CampbellBozorgnia2014</uncertaintyModel>
+          <uncertaintyWeight>0.3</uncertaintyWeight>
+        </logicTreeBranch>
+        <logicTreeBranch branchID="b13">
+          <uncertaintyModel>ChiouYoungs2014</uncertaintyModel>
+          <uncertaintyWeight>0.3</uncertaintyWeight>
+        </logicTreeBranch>
+      </logicTreeBranchSet>
+    </logicTreeBranchingLevel>
+
+    <logicTreeBranchingLevel branchingLevelID="bl2">
+      <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs2" applyToTectonicRegionType="Subduction Interface">
+        <logicTreeBranch branchID="b21">
+          <uncertaintyModel>ZhaoEtAl2006SInter</uncertaintyModel>
+          <uncertaintyWeight>0.5</uncertaintyWeight>
+        </logicTreeBranch>
+        <logicTreeBranch branchID="b22">
+          <uncertaintyModel>AtkinsonBoore2003SInter</uncertaintyModel>
+          <uncertaintyWeight>0.5</uncertaintyWeight>
+        </logicTreeBranch>
+      </logicTreeBranchSet>
+    </logicTreeBranchingLevel>
+
+    <logicTreeBranchingLevel branchingLevelID="bl3">
+      <logicTreeBranchSet uncertaintyType="gmpeModel" branchSetID="bs3" applyToTectonicRegionType="Subduction IntraSlab">
+        <logicTreeBranch branchID="b31">
+          <uncertaintyModel>ZhaoEtAl2006SSlab</uncertaintyModel>
+          <uncertaintyWeight>0.5</uncertaintyWeight>
+        </logicTreeBranch>
+        <logicTreeBranch branchID="b32">
+          <uncertaintyModel>AtkinsonBoore2003SSlab</uncertaintyModel>
+          <uncertaintyWeight>0.5</uncertaintyWeight>
+        </logicTreeBranch>
+      </logicTreeBranchSet>
+    </logicTreeBranchingLevel>
+
+  </logicTree>
+</nrml>
